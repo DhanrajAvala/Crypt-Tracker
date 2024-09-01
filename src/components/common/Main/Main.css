@@ -1,0 +1,77 @@
+.tittle {
+  margin-top: 80px;
+  font-size: 8rem;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  color: white;
+}
+
+.tittle:hover {
+  -webkit-text-stroke-color: white;
+  transition: all 0.3s;
+  color: black;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-tittle {
+  font-size: 8rem;
+  color: #1976d2;
+}
+
+.main-paragraph {
+  color: gray;
+  margin: 16px 0px;
+  font-size: 16px;
+}
+
+.main-button {
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.main-button {
+  display: flex;
+}
+
+.share-btn {
+  background-color: black;
+  border: 2px solid #1976d2;
+  padding: 12px 50px;
+}
+
+.share-btn:hover {
+  background-color: #1976d2;
+}
+
+/* phone content */
+.right-component {
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+.phone-container {
+  width: 40%;
+  position: relative;
+  padding: 1rem;
+  position: sticky;
+}
+
+.iphone {
+  position: absolute;
+  z-index: 100;
+  min-width: 300px;
+  width: 40%;
+  right: 0;
+}
+
+.gradient {
+  position: absolute;
+  min-width: 250px;
+  width: 40%;
+  top: 8rem;
+  right: 0;
+}

@@ -1,0 +1,12 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,121 @@
+.grid-box {
+  background-color: #1b1b1b;
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.grid-box:hover {
+  border: 2px solid #61c96f;
+  transition: all 0.3s;
+}
+
+.grid-box-red:hover {
+  border: 2px solid #f94141 !important;
+  transition: all 0.3s;
+}
+
+.grid {
+  display: flex;
+  gap: 35px;
+}
+
+.grid-tittle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.grid-subtittle {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: #888888;
+  text-transform: capitalize;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.grid-percentage {
+  border: 2px solid #61c96f;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  color: #61c96f;
+  font-weight: 600;
+}
+
+.chip-red {
+  border: 2px solid #f94141;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  color: #f94141;
+  font-weight: 600;
+}
+
+.chip-red:hover {
+  background-color: #f94141 !important;
+  color: white;
+}
+
+.grid-percentage:hover {
+  background-color: #61c96f;
+  color: white;
+}
+
+.grid-graph {
+  border: 2px solid #61c96f;
+  border-radius: 50%;
+  padding: 0.31rem 0.45rem;
+  color: #61c96f;
+  font-weight: 600;
+}
+
+.graph-red {
+  border: 2px solid #f94141 !important;
+  border-radius: 50%;
+  padding: 0.31rem 0.45rem;
+  color: #f94141;
+  font-weight: 600;
+}
+
+.graph-red:hover {
+  background-color: #f94141 !important;
+  color: white;
+}
+
+.grid-graph:hover {
+  background-color: #61c96f;
+  color: white;
+}
+
+.grid-price {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #61c96f;
+}
+
+.red-price {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f94141;
+}
+
+.grid-name {
+  margin-top: 20px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 0.8rem;
+  gap: 10px;
+  color: #888888;
+  margin-bottom: 10px;
+}
