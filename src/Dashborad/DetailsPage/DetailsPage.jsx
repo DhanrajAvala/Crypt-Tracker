@@ -5,7 +5,7 @@ import Header from "../../components/common/Header/Header";
 import Loader from "../../components/common/Loader/Loader";
 import CoinInfo from "./CoinInfo/CoinInfo";
 import LineChart from "./LineChart/LineChart";
-import SelectDays from "./SelectDays/SelectDays";
+import SelectDays from "../DetailsPage/SelectDays/SelectDays";
 import "./DetailsPage.css";
 import { coinObject } from "../../functions/Covertbjects";
 import List from "../List/List";

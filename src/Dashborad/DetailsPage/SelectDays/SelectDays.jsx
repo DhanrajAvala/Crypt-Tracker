@@ -1,5 +1,5 @@
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import "./Selectdays.css";
+import "./SelectDays.css";
 
 export default function SelectDays({ days, handleDaysChange }) {
   return (
