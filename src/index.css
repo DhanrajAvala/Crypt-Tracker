@@ -7,6 +7,22 @@ body {
   font-family: Inter, sans-serif;
   padding-left: 3rem;
   padding-right: 3rem;
-  background-color: black;
-  color: white;
+  background-color: var(--body_background);
+  /* color: white; */
+}
+
+:root {
+  --body_background: white;
+  --body_color: black;
+  --search_background: #f3f3f3;
+  --footer_background: #f3f3f3; /* Light theme footer background */
+  --footer_color: #000; /* Light theme footer text color */
+}
+
+[data-theme="dark"] {
+  --body_background: black;
+  --body_color: white;
+  --search_background: #1b1b1b;
+  --footer_background: #1976d2; /* Dark theme footer background */
+  --footer_color: black; /* Dark theme footer text color */
 }

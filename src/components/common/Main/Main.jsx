@@ -1,21 +1,23 @@
 import React from "react";
 import "./Main.css";
 import Button from "../Button/Button";
+import ShareBtn from "../../common/Button/ShareBtn/ShareBtn";
 import phone1 from "../../../assets/phone 1.svg";
 import gradient1 from "../../../assets/gradient 1.svg";
 import { delay, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <div className="main">
       <div className="left-component">
-        <motion.h1
+        <motion.span
           className="tittle"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Track <br /> Crypto
-        </motion.h1>
+        </motion.span>
 
         <motion.h1
           className="sub-tittle"
@@ -42,8 +44,11 @@ const Main = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <Button className="dashboard-btn" text="Dashboard" />
-          <Button className="share-btn" text="share" />
+          <Link to="/dashboard">
+            <Button className="dashboard-btn" text="Dashboard" />
+          </Link>
+
+          <ShareBtn />
         </motion.div>
       </div>
 

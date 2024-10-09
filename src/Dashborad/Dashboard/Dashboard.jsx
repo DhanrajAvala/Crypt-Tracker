@@ -10,6 +10,7 @@ const Dashboard = () => {
   const [paginatedCoins, setPaginatedCoins] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true); // Loading state
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -26,9 +27,11 @@ const Dashboard = () => {
       .then((response) => {
         setAllCoins(response.data);
         setPaginatedCoins(response.data.slice(0, itemsPerPage));
+        setIsLoading(false); // Data is loaded
       })
       .catch((error) => {
         console.error(error);
+        setIsLoading(false); // Even if error, stop loading
       });
   }, []);
 
@@ -62,12 +65,22 @@ const Dashboard = () => {
     <>
       <Header />
       <Search searchInput={searchInput} onSearchChange={onSearchChange} />
-      <TabComponent allcoins={paginatedCoins} />
-      <PaginationComponent
-        page={page}
-        handlePageChange={handlePageChange}
-        count={Math.ceil(displayCoins.length / itemsPerPage)}
-      />
+
+      {isLoading ? (
+        <div>Loading...</div> // Loading message or spinner
+      ) : (
+        <>
+          <TabComponent allcoins={paginatedCoins} />
+
+          {displayCoins.length > itemsPerPage && (
+            <PaginationComponent
+              page={page}
+              handlePageChange={handlePageChange}
+              count={Math.ceil(displayCoins.length / itemsPerPage)}
+            />
+          )}
+        </>
+      )}
     </>
   );
 };

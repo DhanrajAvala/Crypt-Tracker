@@ -1,30 +1,204 @@
+.list-container {
+  display: table;
+  align-items: center;
+  width: 100%;
+  table-layout: fixed;
+  margin-left: -35px;
+}
+
+.list-container:hover {
+  transition: all 0.3s;
+  background-color: var(--search_background);
+  border-radius: 10px;
+  border: none;
+}
+
+.list-box {
+  display: table-row;
+  width: 100%;
+}
+
+.list-container td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
 .list-tittle {
-  text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
+  text-transform: uppercase;
+  color: var(--body_color);
 }
 
 .list-subtittle {
-  text-transform: capitalize;
-  color: gray;
+  display: block;
   font-size: 12.8px;
+  color: gray;
+  text-transform: capitalize;
 }
 
-.list-chip {
+.list {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  margin-top: 1.4rem;
+}
+
+.list-percentage,
+.list-graph {
+  display: inline-block;
 }
 
 .list-percentage {
-  padding-right: 20px;
-  border: 1px solid white;
+  border: 2px solid #61c96f;
   border-radius: 50px;
   padding: 8px 12px;
+  color: #61c96f;
+}
+
+.list-percentage:hover {
+  background-color: #61c96f;
+  color: white;
 }
 
 .list-graph {
   border-radius: 50%;
-  border: 1px solid white;
+  border: 2px solid #61c96f;
   padding: 4px 7px;
+  color: #61c96f;
+}
+
+.list-graph:hover {
+  background-color: #61c96f;
+  color: white;
+}
+
+.list-red {
+  border: 2px solid #f94141;
+  color: #f94141;
+}
+
+.list-red:hover {
+  background-color: #f94141 !important;
+  color: white;
+}
+
+.lgraph-red {
+  border: 2px solid #f94141;
+  color: #f94141;
+}
+
+.lgraph-red:hover {
+  background-color: #f94141;
+  color: white;
+}
+
+.list-price,
+.list-red-price {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.list-price {
+  color: #61c96f;
+}
+
+.list-red-price {
+  color: #f94141;
+}
+
+.list-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--body_color);
+}
+
+@media only screen and (max-width: 996px) {
+  .list-name {
+    font-size: 0.9rem; /* Example of adjusting font size for small screens */
+    /* You can add other styles specific to smaller screens */
+  }
+
+  .list-img img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .list-tittle,
+  .list-subtittle {
+    font-size: 0.9rem;
+  }
+
+  .list-price {
+    font-size: 0.9rem;
+  }
+
+  .list-red-price {
+    font-size: 0.9rem;
+  }
+
+  .list-percentage {
+    padding: 3px 8px; /* Decrease padding for percentage */
+    font-size: 0.8rem; /* Adjust font size */
+    border-radius: 20px; /* Adjust border-radius if needed */
+    margin-top: -8px;
+  }
+
+  .list-graph {
+    padding: 1px 4px; /* Adjust the padding of the graph icon */
+    font-size: 0.9rem; /* Adjust the font size of the icon */
+    margin-top: -8px;
+  }
+
+  .lgraph-red {
+    padding: 2px 4px; /* Adjust the padding of the red graph icon */
+    font-size: 0.5rem; /* Adjust the font size of the red icon */
+  }
+}
+
+@media only screen and (max-width: 806px) {
+  .list-percentage {
+    padding: 3px 6px; /* Decrease padding for percentage */
+    font-size: 0.5rem; /* Adjust font size */
+    border-radius: 20px; /* Adjust border-radius if needed */
+    margin-top: 2px;
+  }
+
+  .list-graph {
+    display: none;
+  }
+
+  .list-box {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .list-name {
+    font-size: 0.9rem; /* Adjust font size */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 5ch; /* Further restrict length if needed */
+  }
+}
+
+@media only screen and (max-width: 664px) {
+  .list-tittle {
+    font-size: 1rem; /* Reduce font size */
+    text-transform: uppercase; /* Keep the text in uppercase for consistency */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+    max-width: 100px; /* Adjust width to prevent overflowing */
+  }
+
+  .list-subtittle {
+    font-size: 0.8rem; /* Adjust font size for better visibility */
+    color: gray;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+    max-width: 150px; /* Adjust width to fit smaller screens */
+  }
 }

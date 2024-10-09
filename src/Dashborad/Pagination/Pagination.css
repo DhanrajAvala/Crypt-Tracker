@@ -5,3 +5,9 @@
   width: fit-content;
   margin: auto;
 }
+
+@media only screen and (max-width: 1200px) {
+  .pagination-component {
+    justify-content: center;
+  }
+}

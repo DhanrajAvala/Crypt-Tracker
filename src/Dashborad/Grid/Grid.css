@@ -1,5 +1,5 @@
 .grid-box {
-  background-color: #1b1b1b;
+  background-color: var(--search_background);
   width: 300px;
   height: 300px;
   border-radius: 1rem;
@@ -26,6 +26,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--body_color);
 }
 
 .grid-subtittle {
@@ -50,6 +51,11 @@
   font-weight: 600;
 }
 
+.grid-percentage:hover {
+  background-color: #61c96f;
+  color: white;
+}
+
 .chip-red {
   border: 2px solid #f94141;
   padding: 0.6rem 1rem;
@@ -60,11 +66,6 @@
 
 .chip-red:hover {
   background-color: #f94141 !important;
-  color: white;
-}
-
-.grid-percentage:hover {
-  background-color: #61c96f;
   color: white;
 }
 
@@ -118,4 +119,93 @@
   gap: 10px;
   color: #888888;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 773px) {
+  .grid-box {
+    justify-content: center; /* Centers the grid-box horizontally */
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-box {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-box {
+    height: 375px;
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .grid-box {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 448px) {
+  .grid-box {
+    height: 320px;
+    width: 320px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .grid-box {
+    height: 290px;
+    width: 290px;
+  }
+
+  .grid-percentage {
+    border: 1px solid #61c96f;
+    padding: 0.4rem 0.5rem;
+    border-radius: 1rem;
+    color: #61c96f;
+  }
+
+  .grid-graph {
+    border: 1px solid #61c96f;
+    border-radius: 50%;
+    padding: 0.15rem 0.2rem;
+    color: #61c96f;
+  }
+
+  .chip-red {
+    border: 1px solid #f94141;
+    padding: 0.3rem 0.5rem;
+    border-radius: 2rem;
+    color: #f94141;
+  }
+
+  .graph-red {
+    border: 1px solid #f94141 !important;
+    border-radius: 50%;
+    padding: 0.15rem 0.2rem;
+    color: #f94141;
+  }
+
+  .grid-price {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #61c96f;
+  }
+
+  .red-price {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #f94141;
+  }
+
+  .name {
+    font-size: 0.7rem;
+    gap: 6px;
+    color: #888888;
+    margin-bottom: 10px;
+  }
 }

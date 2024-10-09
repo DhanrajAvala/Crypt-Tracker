@@ -1,0 +1,93 @@
+/* Footer styles */
+.footer {
+  background-color: var(--footer_background);
+  color: var(--footer_color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 64px;
+  margin-top: 2rem;
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  left: calc(-50vw + 50%); /* To center the footer and remove side padding */
+  box-sizing: border-box;
+}
+
+.foot {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footer-content {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px 40px;
+    margin-top: 200px; /* Remove margins to allow full width */
+    width: 100vw; /* Ensure it takes the full width of the viewport */
+    left: calc(-50vw + 50%); /* Center it */
+    box-sizing: border-box; /* Ensure padding is within the element's total width */
+  }
+
+  .foot,
+  .footer-content {
+    text-align: center; /* Center text on small screens */
+  }
+
+  .foot {
+    font-size: 1.5rem; /* Reduce font size on smaller screens */
+  }
+
+  .footer-content {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1090px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 15px 20px;
+    margin: 0; /* Remove any margin */
+    width: 100vw;
+    left: calc(-50vw + 50%); /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding in total width */
+    margin-top: 140px;
+  }
+
+  .foot {
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 916px) {
+  .footer {
+    padding: 15px 20px;
+    margin: 0; /* Remove margin to allow full width */
+    width: 100vw;
+    left: calc(-50vw + 50%); /* Ensure full width and centered */
+    box-sizing: border-box;
+    margin-top: 460px;
+  }
+
+  .foot {
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    font-size: 14px;
+  }
+}
